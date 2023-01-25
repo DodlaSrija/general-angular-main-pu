@@ -1,0 +1,111 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+html, body { 
+  height: 100%; 
+}
+body { 
+  margin: 0; 
+  background-image: url('https://media.istockphoto.com/id/1324933770/vector/green-star-burst-background.jpg?s=612x612&w=0&k=20&c=U4xOP9EelDi_sWQiKdvJwSOdTasiVDJIQk8uI0msYWI=');
+  background: linear-gradient(rgb(141, 241, 141)); 
+  font-family: initial !important; 
+  color: #222f3e
+}
+.title-page{
+  border-bottom: 1px solid;
+  font-family: initial;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 230px;
+  text-align: center;
+  color: #2c3e50;
+  }
+
+  .container {
+      margin-top: 40px;
+  }
+  .fa-info-circle{
+    color: #4b6584;
+    font-size: 20px;
+    cursor: pointer; 
+    margin-left: 22px;
+}
+#btn{
+     background: rgb(254, 254, 254);
+     border: 0;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #ffd;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  #price{
+color: #c23616;
+font-weight: bold;
+padding: 10px 20px;
+border: 1px solid antiquewhite;
+font-size: 16px;
+display: inline-block;
+  }
+
+  .fa-eye-slash{
+  font-size: 22px;
+  color: #4b6584;
+  }
+  .btn-primary {
+    font-size: 12px;;
+  }
+
+
+  .parallax1{
+    background-image: url('https://thumbs.dreamstime.com/b/panoramic-collection-fresh-fruits-vegetables-skinali-iso-panoramic-collection-fresh-fruits-vegetables-skinali-110161377.jpg');
+   
+     
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.footer{
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 10px;
+}
+.quick-links{
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 30%;
+}
+.quick-links ul{
+    padding:0;
+}
+.quick-links li{
+    list-style: none;
+    padding:10px;
+    font-weight:300;
+}
+.a-links{
+    color:#000000;
+}
+.copyrights{
+    font-size: 16px;
+    font-family: verdana, arial, helvecita, sans-serif;
+    margin:15px;
+}

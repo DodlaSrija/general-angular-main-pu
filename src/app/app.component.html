@@ -1,0 +1,142 @@
+<style>
+  body {
+    background-image: url('');
+    font-family: initial;
+    font-size: 16px;
+  }
+  
+  
+  .spacer {
+    flex: 1;
+  }
+
+  a {
+    margin-right: 20px;
+    color: aliceblue;
+  }
+
+  .toolbar {
+    background-image:url('https://thumbs.dreamstime.com/b/fruits-vegetables-food-background-spices-ingredients-berries-banner-above-fruit-136872957.jpg');
+    background-image:cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    background-color: #52954d;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+
+  .fa-shopping-cart {
+    font-size: 50px;
+    margin: 10px;
+  }
+  .sticky{
+    position:fixed;
+    width:100%;
+}
+.menu{
+    background:#244e3a;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    display: inline;
+}
+.name{
+   color:cyan;
+    height:max-content;
+    font-size: 50px;
+    background-position:center;
+    text-align: center;
+  
+  ;
+}
+</style>
+
+<div class="toolbar" role="banner">
+  
+  <div class="name">
+    <i class="fas fa-shopping-cart"></i>
+    <span [routerLink]="['/dashboard']" > Rishi General Stores</span>
+  </div>
+  <div class="spacer"></div>
+  
+  
+  
+  <div class="menu" id="sticky"> <div class="search-box">
+
+  <button mat-button [matMenuTriggerFor]="menu">Menu <i class="fas fa-caret-down"></i></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let cat of categories"
+      [routerLink]="['/dsiplay-category/', cat.id]">{{cat.name}}</button>
+  </mat-menu>
+ 
+  <a type="button" [routerLink]="['/dashboard']">
+    Home <i class="fas fa-home"></i>
+  </a>
+  <a type="button" *ngIf="user" [routerLink]="['/profile/', user.id]">
+    Profile <i class="fas fa-user"></i>
+  </a>
+  <a type="button" (click)="login()" *ngIf="!user">
+    login
+  </a>
+</div>
+<br>
+
+  <form>
+      <input type="text" placeholder="Search...." name="search" class="search-input"/>
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>
+</div>
+
+<router-outlet></router-outlet>
+  <!--footer starts-->
+  <div class="parallax1">
+    <div class="footer">
+        <div class="quick-links">
+            <div>Locations</div>
+            <ul>
+                <li><a href="" class="a-links">Address 1</a></li>
+                <li><a href="" class="a-links">Address 2</a></li>
+                <li><a href="" class="a-links">Address 3</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <div>Careers</div>
+            <ul>
+                <li><a href="" class="a-links">Packing Staff</a></li>
+                <li><a href="" class="a-links">Delivery Agents</a></li>
+                <li><a href="" class="a-links">Shelf Fillers</a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <div>Quick Links</div>
+            <ul>
+                <li><a href="" class="a-links">Contact Us</a></li>
+                <li><a href="" class="a-links">FAQ</a></li>
+                <li><a href="" class="a-links">Help</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--footer ends-->
